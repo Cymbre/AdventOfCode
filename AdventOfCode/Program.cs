@@ -1,12 +1,12 @@
-﻿using System;
-
-namespace AdventOfCode
+﻿namespace AdventOfCode
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var aoc = new Submarine();
+            aoc.ReportDayOne();
+            aoc.ReportDayTwo();
         }
     }
 }
