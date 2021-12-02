@@ -14,6 +14,7 @@
         </e>
         <e p="InputFiles" t="Include">
           <e p="day1.txt" t="Include" />
+          <e p="day2.txt" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
