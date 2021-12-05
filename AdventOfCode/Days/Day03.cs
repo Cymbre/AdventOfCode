@@ -80,34 +80,20 @@ namespace AdventOfCode.Days
             {
                 if (mode == 1)
                 {
-                    foreach (var ints in nullList) input.Remove(ints);
-
-                    PartTwoRecursive(input, collumn + 1, mode);
+                    return PartTwoRecursive(oneList, collumn + 1, mode);
                 }
-                else
-                {
-                    foreach (var ints in oneList) input.Remove(ints);
 
-                    PartTwoRecursive(input, collumn + 1, mode);
-                }
+                return PartTwoRecursive(nullList, collumn + 1, mode);
             }
-            else
+
+            if (oneList.Count * mode >= nullList.Count * mode)
             {
-                if (oneList.Count * mode >= nullList.Count * mode)
-                {
-                    foreach (var ints in nullList) input.Remove(ints);
-
-                    PartTwoRecursive(input, collumn + 1, mode);
-                }
-                else
-                {
-                    foreach (var ints in oneList) input.Remove(ints);
-
-                    PartTwoRecursive(input, collumn + 1, mode);
-                }
+                return PartTwoRecursive(oneList, collumn + 1, mode);
             }
 
-            return input[0];
+            return PartTwoRecursive(nullList, collumn + 1, mode);
         }
     }
+}
+
 }
