@@ -5,34 +5,32 @@ namespace AdventOfCode
 {
     public class Submarine
     {
-        private readonly DayOne _dayOne;
-        private readonly DayTwo _dayTwo;
         private List<Day> _days;
 
         public Submarine()
         {
-            _days = new List<Day>();
-            _dayOne = new DayOne();
-            _dayTwo = new DayTwo();
-            _days.Add(new DayThree());
+            _days = new List<Day>
+            {
+                new Day01(),
+                new Day02(),
+                new Day03(),
+                new Day04()
+            };
         }
 
-        public void ReportDay01()
+        public void ReportDays()
         {
-            _dayOne.PartOne();
-            _dayOne.PartTwo();
+            foreach (var day in _days)
+            {
+                day.PartOne();
+                day.PartTwo();
+            }
         }
 
-        public void ReportDay02()
+        public void ReportDay(int day)
         {
-            _dayTwo.PartOne();
-            _dayTwo.PartTwo();
-        }
-
-        public void ReportDay03()
-        {
-            _days[0].PartOne();
-            _days[0].PartTwo();
+            _days[day - 1].PartOne();
+            _days[day - 1].PartTwo();
         }
     }
 }

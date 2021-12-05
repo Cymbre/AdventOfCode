@@ -5,14 +5,14 @@ using AdventOfCode.Util;
 
 namespace AdventOfCode.Days
 {
-    public class DayTwo : Day
+    public class Day02 : Day
     {
         private readonly List<Tuple<string, int>> _input;
 
-        public DayTwo() : base()
+        public Day02() : base()
         {
             string pattern = @"(\w+)\s(\d)";
-            _path = BasePath + "day2.txt";
+            _path = BasePath + "day02.txt";
             _input = FileReader.ReadFileToObjectListWithRegex(_path, pattern, Parser);
         }
 

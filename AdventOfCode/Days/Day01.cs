@@ -4,13 +4,13 @@ using AdventOfCode.Util;
 
 namespace AdventOfCode.Days
 {
-    public class DayOne : Day
+    public class Day01 : Day
     {
         private readonly List<int> _input;
 
-        public DayOne() : base()
+        public Day01() : base()
         {
-            _path = BasePath + "day1.txt";
+            _path = BasePath + "day01.txt";
             _input = FileReader.ReadFileToIntList(_path);
         }
 
