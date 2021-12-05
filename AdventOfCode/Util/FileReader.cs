@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace AdventOfCode.Util
 {
@@ -17,6 +18,7 @@ namespace AdventOfCode.Util
             return File.ReadAllLines(path).Select(int.Parse).ToList();
         }
 
+
         public static List<Tuple<string, int>> ReadFileToStringIntTupleList(string path)
         {
             var input = File.ReadAllLines(path).ToList();
@@ -28,6 +30,22 @@ namespace AdventOfCode.Util
             }
 
             return tupleList;
+        }
+
+
+        public static List<T> ReadFileToObjectListWithRegex<T>(string path, string pattern,
+            Func<GroupCollection, T> parser)
+        {
+            var input = File.ReadAllLines(path).ToList();
+
+            var output = new List<T>();
+            foreach (var row in input)
+            {
+                var match = Regex.Match(row, pattern);
+                output.Add(parser.Invoke(match.Groups));
+            }
+
+            return output;
         }
     }
 }

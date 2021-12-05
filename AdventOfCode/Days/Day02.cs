@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using AdventOfCode.Util;
 
 namespace AdventOfCode.Days
@@ -8,9 +9,11 @@ namespace AdventOfCode.Days
     {
         private readonly List<Tuple<string, int>> _input;
 
-        public DayTwo(string path) : base(path)
+        public DayTwo() : base()
         {
-            _input = FileReader.ReadFileToStringIntTupleList(path);
+            string pattern = @"(\w+)\s(\d)";
+            _path = BasePath + "day2.txt";
+            _input = FileReader.ReadFileToObjectListWithRegex(_path, pattern, Parser);
         }
 
         public override void PartOne()
@@ -65,6 +68,11 @@ namespace AdventOfCode.Days
             }
 
             Console.WriteLine(depth + " * " + horizontalPosition + " = " + (horizontalPosition * depth));
+        }
+
+        private static Tuple<string, int> Parser(GroupCollection groupCollection)
+        {
+            return new Tuple<string, int>(groupCollection[1].Value, int.Parse(groupCollection[2].Value));
         }
     }
 }

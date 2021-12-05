@@ -2,12 +2,8 @@
 {
     public abstract class Day
     {
-        private string _path;
-
-        protected Day(string path)
-        {
-            this._path = path;
-        }
+        protected static string BasePath = "..//..//..//InputFiles//";
+        protected string _path;
 
         public abstract void PartOne();
 

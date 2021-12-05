@@ -8,9 +8,10 @@ namespace AdventOfCode.Days
     {
         private readonly List<int> _input;
 
-        public DayOne(string path) : base(path)
+        public DayOne() : base()
         {
-            _input = FileReader.ReadFileToIntList(path);
+            _path = BasePath + "day1.txt";
+            _input = FileReader.ReadFileToIntList(_path);
         }
 
         public override void PartOne()

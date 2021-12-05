@@ -9,12 +9,14 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Days" t="Include">
           <e p="Day.cs" t="Include" />
-          <e p="DayOne.cs" t="Include" />
-          <e p="DayTwo.cs" t="Include" />
+          <e p="Day01.cs" t="Include" />
+          <e p="Day02.cs" t="Include" />
+          <e p="Day03.cs" t="Include" />
         </e>
         <e p="InputFiles" t="Include">
           <e p="day1.txt" t="Include" />
           <e p="day2.txt" t="Include" />
+          <e p="day3.txt" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -27,6 +29,7 @@
         <e p="Submarine.cs" t="Include" />
         <e p="Util" t="Include">
           <e p="FileReader.cs" t="Include" />
+          <e p="Matrizen.cs" t="Include" />
         </e>
       </e>
       <e p="AdventOfCode.sln" t="IncludeFlat" />
