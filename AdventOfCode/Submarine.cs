@@ -15,7 +15,8 @@ namespace AdventOfCode
                 new Day02(),
                 new Day03(),
                 new Day04(),
-                new Day05()
+                new Day05(),
+                new Day06()
             };
         }
 
@@ -31,6 +32,11 @@ namespace AdventOfCode
         public void ReportDay(int day)
         {
             _days[day - 1].PartOne();
+            _days[day - 1].PartTwo();
+        }
+
+        public void ReportDayPart2(int day)
+        {
             _days[day - 1].PartTwo();
         }
     }
