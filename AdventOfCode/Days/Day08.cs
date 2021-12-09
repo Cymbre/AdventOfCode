@@ -45,21 +45,25 @@ namespace AdventOfCode.Days
             {
                 var map = new Dictionary<HashSet<char>, int>(HashSet<char>.CreateSetComparer());
                 var digits = row.GetRange(0, 10).Select(s => s.ToCharArray().ToHashSet());
-                var one = digits.First(d => d.Count == 2);
-                var four = digits.First(d => d.Count == 4);
-                var seven = digits.First(d => d.Count == 3);
-                var eight = digits.First(d => d.Count == 7);
 
-                var segement5 = digits.Where(d => d.Count == 5);
-                var segement6 = digits.Where(d => d.Count == 6);
+                var enumerable = digits.ToList();
+                var one = enumerable.First(d => d.Count == 2);
+                var four = enumerable.First(d => d.Count == 4);
+                var seven = enumerable.First(d => d.Count == 3);
+                var eight = enumerable.First(d => d.Count == 7);
 
-                var nine = segement6.First(d => d.IsSupersetOf(four));
-                var zero = segement6.First(d => d.IsSupersetOf(one) && !d.IsSupersetOf(nine));
-                var six = segement6.First(d => !d.IsSupersetOf(zero) && !d.IsSupersetOf(nine));
+                var segement5 = enumerable.Where(d => d.Count == 5);
+                var segement6 = enumerable.Where(d => d.Count == 6);
 
-                var three = segement5.First(d => d.IsSupersetOf(one));
-                var five = segement5.First(d => six.IsSupersetOf(d) && !d.IsSupersetOf(three));
-                var two = segement5.First(d => !d.IsSupersetOf(three) && !d.IsSupersetOf(five));
+                var enumerable1 = segement6.ToList();
+                var nine = enumerable1.First(d => d.IsSupersetOf(four));
+                var zero = enumerable1.First(d => d.IsSupersetOf(one) && !d.IsSupersetOf(nine));
+                var six = enumerable1.First(d => !d.IsSupersetOf(zero) && !d.IsSupersetOf(nine));
+
+                var enumerable2 = segement5.ToList();
+                var three = enumerable2.First(d => d.IsSupersetOf(one));
+                var five = enumerable2.First(d => six.IsSupersetOf(d) && !d.IsSupersetOf(three));
+                var two = enumerable2.First(d => !d.IsSupersetOf(three) && !d.IsSupersetOf(five));
 
                 map.Add(zero, 0);
                 map.Add(one, 1);
