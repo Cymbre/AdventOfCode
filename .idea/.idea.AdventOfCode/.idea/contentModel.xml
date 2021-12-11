@@ -19,6 +19,7 @@
           <e p="Day08.cs" t="Include" />
           <e p="Day09.cs" t="Include" />
           <e p="Day10.cs" t="Include" />
+          <e p="Day11.cs" t="Include" />
         </e>
         <e p="InputFiles" t="Include">
           <e p="day01.txt" t="Include" />
@@ -36,6 +37,8 @@
           <e p="day09Test.txt" t="Include" />
           <e p="day10.txt" t="Include" />
           <e p="day10Test.txt" t="Include" />
+          <e p="day11.txt" t="Include" />
+          <e p="day11Test.txt" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
