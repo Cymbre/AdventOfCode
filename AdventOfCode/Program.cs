@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             var aoc = new Submarine();
-            aoc.ReportDay(11);
+            aoc.ReportDay(12);
             //aoc.ReportDayPart2(6);
         }
     }
