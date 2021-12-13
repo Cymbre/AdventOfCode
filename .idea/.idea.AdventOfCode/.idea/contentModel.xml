@@ -21,6 +21,7 @@
           <e p="Day10.cs" t="Include" />
           <e p="Day11.cs" t="Include" />
           <e p="Day12.cs" t="Include" />
+          <e p="Day13.cs" t="Include" />
         </e>
         <e p="InputFiles" t="Include">
           <e p="day01.txt" t="Include" />
@@ -42,6 +43,8 @@
           <e p="day11Test.txt" t="Include" />
           <e p="day12.txt" t="Include" />
           <e p="day12Test.txt" t="Include" />
+          <e p="day13.txt" t="Include" />
+          <e p="day13Test.txt" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -53,6 +56,7 @@
         <e p="Program.cs" t="Include" />
         <e p="Submarine.cs" t="Include" />
         <e p="Util" t="Include">
+          <e p="BitArray2D.cs" t="Include" />
           <e p="FileReader.cs" t="Include" />
           <e p="Matrizen.cs" t="Include" />
           <e p="Util.cs" t="Include" />
